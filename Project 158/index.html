@@ -4,8 +4,11 @@
     <meta charset="utf-8" />
     <title>Virtual Comics Store</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
     <script src="./js/Posters.js"></script>
-    <script src="./js/Highlight.js"></script>
+    <script src="./js/highlights.js"></script>
+    
   </head>
   <body>
     <a-scene background="color:#90caf9">
@@ -18,7 +21,7 @@
         rotation="-90 0 0"
       ></a-plane>
       <!-- Poster Container -->
-      <a-entity id="posters-container" cursor-listener comics-posters> </a-entity>
+      <a-entity id="posters-container" comics-posters > </a-entity>
 
       <a-camera id="camera" wasd-controls="enabled:false;" position="0 10 20">
         <a-entity
@@ -30,6 +33,7 @@
         >
         </a-entity>
 
+        <!-- Title -->
         <a-entity
           id="app-title"
           position="0 0.73 -1"
@@ -40,7 +44,7 @@
             position="0 -0.1 0"
             text="font: dejavu; align: center; width: 1; color: #0F184E; value: Get Your Favourite Comics"
           ></a-entity>
-        </a-entity>
+        </a-entity>        
       </a-camera>
     </a-scene>
   </body>

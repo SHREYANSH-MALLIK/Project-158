@@ -11,7 +11,7 @@ AFRAME.registerComponent("comics-posters", {
         url: "./assets/posters/geronimo_stilton.jpg"
       },
       {
-        id: "harry-potter",
+        id: "harry_potter",
         url: "./assets/posters/harry_potter.jpg"
       },
 
@@ -20,7 +20,7 @@ AFRAME.registerComponent("comics-posters", {
         url: "./assets/posters/heroes_of_the_olympus.jpg"
       },
       {
-        id: "magnus-chase",
+        id: "magnus_chase",
         url: "./assets/posters/magnus_chase.jpg"
       }
     ];
@@ -55,7 +55,7 @@ AFRAME.registerComponent("comics-posters", {
 
     entityEl.setAttribute("position", position);
     entityEl.setAttribute("material", { color: "#fff" });
-
+    entityEl.setAttribute("cursor-listener", {});
     return entityEl;
   },
   createPoster: function(item) {
